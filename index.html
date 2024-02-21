@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&display=swap" rel="stylesheet">
-  <title>Список фильмов</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <div class="container">
-    <div class="header">
-      <div class="header__menu">
-        <h1>Список фильмов</h1>
-        <p class="numberYear">2023</p>
-      </div>
-      <h2>Посмотреть</h2>
-    </div>
-    <div class="listMovies__wrapper">
-      <div class="listMovies__input-nameMovie">
-        <input type="text" class="js-inputMovie inputMovie" placeholder="Добавить фильм">
-  
-        <div class="input_btn">
-          <button class="js-btn-new-movie btn-new-movie" ><img src="Ellipse 1.png" alt="">
-          <img class="vector" src="Vector.svg" alt=""></button>  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>Список фильмов</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header__menu">
+          <h1>Список фильмов</h1>
+          <p class="numberYear">2023</p>
         </div>
-      </div>       
-      <ul id="moviesList" class="js-movies-list movies-list" >
-        <input type="radio">
-      </ul>
-    </div>  
-  </div>
+        <h2>Посмотреть</h2>
+      </div>
+      <div class="listMovies__wrapper">
+        <div class="listMovies__input-nameMovie">
+          <input
+            type="text"
+            class="js-inputMovie inputMovie"
+            placeholder="Добавить фильм"
+          />
 
- 
+          <div class="input_btn">
+            <button class="js-btn-new-movie btn-new-movie">
+              <img src="Ellipse 1.png" alt="" />
+              <img class="vector" src="Vector.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <ul id="moviesList" class="js-movies-list movies-list"></ul>
+      </div>
+    </div>
 
-  <script src="index1.js"></script>
-  
-</body>
+    <script src="index1.js"></script>
+  </body>
 </html>
