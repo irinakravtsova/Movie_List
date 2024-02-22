@@ -17,7 +17,7 @@ function getFromUser() {
   return movie;
 }
 
-function addMovies(movie) {
+function addMovie(movie) {
   movies.push(movie);
 
 }
@@ -94,7 +94,7 @@ function clearInput() {
 
 function addHandler() {
   const movieFromUse = getFromUser();
-  addMovies(movieFromUse);
+  addMovie(movieFromUse);
   render();
   saveMoviesLocalStorage(movies);
   clearInput();
