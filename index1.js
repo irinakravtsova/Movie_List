@@ -13,12 +13,13 @@ render();
 
 function getFromUser() {
   const movieInput = inputNode.value;
-  const movie = movieInput.trim();
+  let movie = movieInput.trim();
   return movie;
 }
 
 function addMovies(movie) {
   movies.push(movie);
+
 }
 function getMovies() {
   return movies;
@@ -46,10 +47,13 @@ function saveMoviesLocalStorage() {
 
 function render() {
   const movies = getMovies();
+ 
   listlNode.innerHTML = "";
+
+ 
   movies.forEach(function (movie) {
-    const li = document.createElement("li");
-    li.className = "li";
+    let movieItem = document.createElement("li");
+   movieItem.className = "movieItem";
 
     const movieName = document.createElement("div");
     movieName.className = "movieName";
@@ -57,27 +61,30 @@ function render() {
 
     const btnDelete = document.createElement("button");
     btnDelete.className = "btn-delete";
-    const btnSelected = document.createElement("div");
+       const btnSelected = document.createElement("div");
     btnSelected.className = "btn-selected";
 
-    li.append(movieName);
-    li.append(btnDelete);
-    li.prepend(btnSelected);
+    movieItem.append(movieName);
+    movieItem.append(btnDelete);
+    movieItem.prepend(btnSelected);
 
-    listlNode.append(li);
-
-    btnDelete.addEventListener("click", function () {
+    listlNode.append(movieItem);
+  
+    
+    function movieDeleteHandler(movie) {
       alert("ты уверен, что хочешь удалить этот фильм?");
-      li.remove();
-      // localStorage.removeItem('movies');
-    });
-    let selectedLi;
-    btnSelected.addEventListener("click", function () {
+          movieItem.remove();
+        }
+   
+    function movieSelectedHandler(movie) {
+      let selectedMovieItem;
       alert("ты действительно хочешь пометить этот фильм, как просмотренный?");
-      selectedLi = li;
-      selectedLi.className = "close";
-      btnSelected.className = "btn-selected-close";
-    });
+      selectedMovieItem = movieItem;
+      selectedMovieItem.className = "movieItem-selected";
+      btnSelected.className = "btn-selected-close"; 
+    }
+    btnDelete.addEventListener("click", movieDeleteHandler);
+    btnSelected.addEventListener("click", movieSelectedHandler);
   });
 }
 
@@ -89,7 +96,7 @@ function addHandler() {
   const movieFromUse = getFromUser();
   addMovies(movieFromUse);
   render();
-  saveMoviesLocalStorage();
+  saveMoviesLocalStorage(movies);
   clearInput();
 }
 

@@ -74,8 +74,8 @@ h2 {
   left: 15px;
 }
 
-.li,
-.close {
+.movieItem,
+.movieItem-selected {
   margin-bottom: 3px;
   display: flex;
   padding: 29px 24px 28px 20px;
@@ -84,7 +84,7 @@ h2 {
   background-color: #3a3939;
   border-radius: 10px;
 }
-.close {
+.movieItem-selected {
   background-color: #181818;
   text-decoration: line-through;
   opacity: 0.3;
@@ -94,12 +94,7 @@ h2 {
   height: 23px;
   background-image: url(крестик.svg);
 }
-/* 
-.movie-checkbox {
-background-color: transparent;
-border: 2px #6532f8;
 
-} */
 .btn-selected,
 .btn-selected-close {
   width: 19px;
