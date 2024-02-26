@@ -4,12 +4,11 @@ const inputNode = document.querySelector(".js-inputMovie");
 const btnAddNode = document.querySelector(".js-btn-new-movie");
 const listlNode = document.querySelector(".js-movies-list");
 
-const btnSelected = document.createElement("input");
-const btnDelete = document.createElement("button");
-const newMovie = {input: btnSelected, movie: movieFromUse, button: btnDelete};
-
-btnSelected.className = "btn-selected";
-btnDelete.className = "btn-delete";
+  const btnSelected = document.createElement("input");
+  btnSelected.className = "btn-selected";
+  const btnDelete = document.createElement("button");
+  btnDelete.className = "btn-delete";
+ 
 
 const moviesFromLStorage = JSON.parse(localStorage.getItem("movies"));
 let movies = [];
@@ -26,6 +25,7 @@ function getFromUser() {
 
 function addMovie(movie) {
   movies.push(movie);
+
 }
 function getMovies() {
   return movies;
@@ -47,7 +47,7 @@ function render() {
     `
 
   });
-  btnAddNode.disabled = false; 
+  // btnAddNode.disabled = false; 
 
  listlNode.innerHTML = movieHTML;
 
@@ -111,9 +111,9 @@ function clearInput() {
 
 function addHandler() {
   const movieFromUse = getFromUser();
-
-
-    console.log(movies);
+  const newMovie = {input: btnSelected, movie: movieFromUse, button: btnDelete};
+  console.log(movies);
+  
   addMovie(newMovie);
   render();
   saveMoviesLocalStorage(movies);
