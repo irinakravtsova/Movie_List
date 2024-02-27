@@ -101,17 +101,17 @@ h2 {
 }
 
 
-.btn-selected {
+/* .btn-selected {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
-  .btn-selected+label {
+  .btn-selected {
     display: inline-flex;
     align-items: center;
     user-select: none;
   }
-  .btn-selected+label::before {
+  .btn-selected::before {
     content: '';
     display: inline-block;
     width: 19px;
@@ -125,18 +125,18 @@ h2 {
     background-position: center center;
     background-size: 50% 50%;
   }
-  .btn-selected:checked+label::before {
+  .btn-selected:checked+lebel::before {
        background-color: #6532f8;
    
-  }
+  } */
   /* стили при наведении курсора на checkbox
 .btn-selected:not(:disabled):not(:checked)+label:hover::before {
   border-color: red;
 } */
 
 
-
-/* .btn-selected-close {
+.btn-selected,
+.btn-selected-close {
   width: 19px;
   height: 18px;
   border: 1px solid #f3f6f9;
@@ -146,7 +146,7 @@ h2 {
 }
 .btn-selected-close {
   background: #6532f8;
-} */
+}
 
 .movieName {
   display: block;
