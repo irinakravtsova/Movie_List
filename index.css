@@ -100,18 +100,19 @@ h2 {
   background-image: url(крестик.svg);
 }
 
-
-/* .btn-selected {
+/* 
+.btn-selected {
     position: absolute;
     z-index: -1;
     opacity: 0;
   }
+
   .btn-selected {
     display: inline-flex;
     align-items: center;
     user-select: none;
   }
-  .btn-selected::before {
+  .btn-selected+label::before {
     content: '';
     display: inline-block;
     width: 19px;
@@ -125,7 +126,7 @@ h2 {
     background-position: center center;
     background-size: 50% 50%;
   }
-  .btn-selected:checked+lebel::before {
+  .btn-selected:checked+label::before {
        background-color: #6532f8;
    
   } */
